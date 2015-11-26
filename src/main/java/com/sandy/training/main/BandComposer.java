@@ -1,20 +1,20 @@
 package com.sandy.training.main;
 
-import com.sandy.training.BassPlayer;
-import com.sandy.training.DrumsPlayer;
-import com.sandy.training.GuitarPlayer;
+import com.sandy.training.BandFactory;
 import com.sandy.training.Player;
 
 public class BandComposer {
 
 	public static void main(String[] args) {
-		Player drumsPlayer = new DrumsPlayer();
+		BandFactory bandFactory = new BandFactory();
+		
+		Player drumsPlayer = bandFactory.getPlayer("drums");
 		drumsPlayer.play();
 		
-		Player bassPlayer = new BassPlayer();
+		Player bassPlayer = bandFactory.getPlayer("bass");
 		bassPlayer.play();
 		
-		Player guitarPlayer = new GuitarPlayer();
+		Player guitarPlayer = bandFactory.getPlayer("guitar");
 		guitarPlayer.play();
 	}
 
