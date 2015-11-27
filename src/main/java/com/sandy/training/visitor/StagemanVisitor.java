@@ -17,7 +17,8 @@ public class StagemanVisitor implements StagePartVisitor {
 	}
 
 	public void visit(Sound sound) {
-		System.out.println("Checking sound");
+		System.out.println("Checking sound frequency");
+		System.out.println("Checking sound loudness");
 	}
 
 	public void visit(Decorations decorations) {
